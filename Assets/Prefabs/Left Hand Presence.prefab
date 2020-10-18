@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 732250225506864199}
-  - component: {fileID: 7543603532187510130}
   - component: {fileID: 732250225506864198}
   m_Layer: 0
   m_Name: Left Hand Presence
@@ -32,25 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &7543603532187510130
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732250225506864193}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aee66efee2f4b8b4aa7900568ec77a83, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &732250225506864198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,9 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17531ddf24b6ec44fbf69e0b86092ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showController: 1
   controllerCharacteristics: 320
-  controllerPrefabs:
-  - {fileID: 6522864452168290107, guid: 1f1e4ff1161b1094894859101f85526a, type: 3}
   handModelPrefab: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b,
     type: 3}

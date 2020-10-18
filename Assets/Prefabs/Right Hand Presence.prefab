@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 732250225506864199}
   - component: {fileID: 732250225506864198}
-  - component: {fileID: -609540586366522987}
   m_Layer: 0
   m_Name: Right Hand Presence
   m_TagString: Untagged
@@ -47,22 +46,3 @@ MonoBehaviour:
   controllerCharacteristics: 576
   handModelPrefab: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364,
     type: 3}
---- !u!95 &-609540586366522987
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732250225506864193}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c138bb62a91db7942a8c1559e907dbe1, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
