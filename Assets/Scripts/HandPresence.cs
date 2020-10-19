@@ -21,6 +21,11 @@ public class HandPresence : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TryInitialize();
+    }
+
+    void TryInitialize()
+    {
         List<InputDevice> devices = new List<InputDevice>();
 
         InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
@@ -60,6 +65,15 @@ public class HandPresence : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateHandAnimation();
+
+        if (!targetDevice.isValid)
+        {
+            TryInitialize();
+        }
+        else
+        {
+            UpdateHandAnimation();
+        }
+
     }
 }
