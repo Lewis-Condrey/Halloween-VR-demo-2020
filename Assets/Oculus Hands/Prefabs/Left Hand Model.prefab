@@ -370,6 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 109434732395451519}
   - component: {fileID: 109434732392105323}
+  - component: {fileID: 3795105201601461249}
   m_Layer: 0
   m_Name: hands:Lhand
   m_TagString: Untagged
@@ -467,6 +468,24 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00654291, y: -0.036744133, z: -0.06238377}
     m_Extent: {x: 0.072534904, y: 0.09257294, z: 0.105605766}
   m_DirtyAABB: 0
+--- !u!114 &3795105201601461249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109434732395284511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+  outlineWidth: 5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &109434732395284577
 GameObject:
   m_ObjectHideFlags: 0
