@@ -104,18 +104,7 @@ MonoBehaviour:
       m_Calls: []
   m_OnActivate:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -6244339325737476542}
-        m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
@@ -167,7 +156,6 @@ MonoBehaviour:
   flashlightON: 0
   flashlightOFF: 0
   theLight: {fileID: 175840570227451501}
-  controllerCharacteristics: 832
 --- !u!1 &175840570590181166
 GameObject:
   m_ObjectHideFlags: 0
