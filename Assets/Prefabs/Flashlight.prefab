@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashlightON: 0
-  flashlightOFF: 0
   theLight: {fileID: 175840570227451501}
 --- !u!1 &175840570590181166
 GameObject:
@@ -271,13 +270,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175840571503229465}
-  m_LocalRotation: {x: -0.008863355, y: 0.4595179, z: -0.8879591, w: 0.017127296}
+  m_LocalRotation: {x: 0.0039112656, y: 0.70297956, z: -0.71119046, w: -0.0035509933}
   m_LocalPosition: {x: 0.0016, y: -0.0022, z: 0.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 175840570227451500}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -234.663, y: -176.88, z: 3.822998}
+  m_LocalEulerAnglesHint: {x: -269.101, y: -222.28, z: -42.250977}
 --- !u!1001 &5588448220362028472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -354,6 +353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.51386
+      objectReference: {fileID: 0}
+    - target: {fileID: -7601226680800833775, guid: 3a03bf817bd45e94ebcadd420192f79a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5568371526223589888, guid: 3a03bf817bd45e94ebcadd420192f79a,
         type: 3}
