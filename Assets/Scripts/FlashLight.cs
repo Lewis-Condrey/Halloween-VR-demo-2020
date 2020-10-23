@@ -8,7 +8,7 @@ using UnityEngine.Experimental.XR;
 
 public class FlashLight : MonoBehaviour
 {
-    public bool flashlightON;
+    public static bool flashlightON;
     public Light theLight;
     XRGrabInteractable m_InteractableBase;
 

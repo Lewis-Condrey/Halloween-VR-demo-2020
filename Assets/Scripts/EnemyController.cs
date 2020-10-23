@@ -13,12 +13,12 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         myrb = GetComponent<Rigidbody>();
+        
     }
 
 
     void FixedUpdate()
     {
-        if (GameObject.Find("Player") != null)
             myrb.velocity = (transform.forward * moveSpeed);
         transform.LookAt(player.transform.position);
     }
@@ -27,7 +27,7 @@ public class EnemyController : MonoBehaviour
     {
         if (collisionInfo.collider.tag == "Player")
         {
-            Debug.Log("ded");
+            Debug.Log(" u ded");
         }
     }
 }
