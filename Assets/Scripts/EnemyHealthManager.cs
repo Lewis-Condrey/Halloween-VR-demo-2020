@@ -24,6 +24,7 @@ public class EnemyHealthManager : MonoBehaviour
         if (FlashLight.flashlightON == true)
         {
             spawner.killed = spawner.killed + 1;
+            Debug.Log("ghoul dead");
             Destroy(gameObject);
         }
         else { return; }

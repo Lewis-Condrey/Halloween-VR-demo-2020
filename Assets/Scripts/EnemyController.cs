@@ -27,7 +27,7 @@ public class EnemyController : MonoBehaviour
     {
         if (collisionInfo.collider.tag == "Player")
         {
-            Debug.Log(" u ded");
+            Debug.Log("you are dead");
         }
     }
 }
