@@ -1416,14 +1416,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - enemyCount: 3
-    timeBetweenSpawns: 10
-  - enemyCount: 5
-    timeBetweenSpawns: 10
   - enemyCount: 5
     timeBetweenSpawns: 8
+  - enemyCount: 5
+    timeBetweenSpawns: 5
   - enemyCount: 7
     timeBetweenSpawns: 8
+  - enemyCount: 7
+    timeBetweenSpawns: 5
   - enemyCount: 10
     timeBetweenSpawns: 5
   enemy: {fileID: 7425963903336339175, guid: 80d5238b61585a242b8627daca798459, type: 3}
@@ -1431,7 +1431,8 @@ MonoBehaviour:
     type: 3}
   waveDelay: 15
   killed: 0
-  Computer: {fileID: 1652012829}
+  spawned: 0
+  Computer: {fileID: 1652012830}
 --- !u!4 &405936721
 Transform:
   m_ObjectHideFlags: 0
@@ -2039,13 +2040,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012196560}
-  m_LocalRotation: {x: 0, y: -0.078459024, z: 0, w: 0.99691737}
-  m_LocalPosition: {x: -0.58, y: 0.8400955, z: -5.32}
+  m_LocalRotation: {x: 0, y: -0.11320323, z: 0, w: 0.9935719}
+  m_LocalPosition: {x: -0.87, y: 0.8400955, z: -5.39}
   m_LocalScale: {x: 0.014741931, y: 3.7717712, z: 7.6566954}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: -9, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -13, z: 0}
 --- !u!1 &1113705719
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,13 +2225,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119520730}
-  m_LocalRotation: {x: 0, y: 0.078459114, z: 0, w: 0.99691737}
-  m_LocalPosition: {x: 0.61, y: 0.8400955, z: -5.34}
+  m_LocalRotation: {x: 0, y: 0.11320323, z: 0, w: 0.9935719}
+  m_LocalPosition: {x: 0.88, y: 0.8400955, z: -5.4}
   m_LocalScale: {x: 0.01576662, y: 3.7717712, z: 7.6566954}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 9, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 13, z: 0}
 --- !u!108 &1128444217 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 2382799219754379413, guid: 4aa67fb8601f95d44b6ce131679e1b11,

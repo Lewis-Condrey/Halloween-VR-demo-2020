@@ -43,6 +43,26 @@ public class ComputerText : MonoBehaviour
         {
             Wave1();
         }
+        if (waveCount == 2)
+        {
+            Wave2();
+        }
+        if (waveCount == 3)
+        {
+            Wave3();
+        }
+        if (waveCount == 4)
+        {
+            Wave4();
+        }
+        if (waveCount == 5)
+        {
+            Wave5();
+        }
+        if (waveCount == 6)
+        {
+            Endgame();
+        }
     }
 
     public void DisplayText() {
@@ -67,43 +87,103 @@ public class ComputerText : MonoBehaviour
         Debug.Log(clickCount);
     }
 
+    public void Endgame()
+    {
+
+    }
+
     public void Wave1()
     {
         
-       if(clickCount == 1)
+       if(clickCount == 0)
         {
             displayText.text = "Start";
         }
-        if (clickCount == 2)
+        if (clickCount == 1)
         {
             displayText.text = "You have been tasked to study this enviroment.";
         }
-        if (clickCount == 3)
+        if (clickCount == 2)
         {
-            displayText.text = "Extraction is in the morning";
+            displayText.text = "Extraction is in the morning.";
         }
-        if (clickCount == 4)
+        if (clickCount == 3)
         {
             displayText.text = "If you see anything unusual be sure to shine your flashlight at it.";
         }
+        if (clickCount == 4)
+        {
+            displayText.text = "Good luck.";
+        }
         if (clickCount == 5)
         {
-            displayText.text = "Good luck";
+            displayText.text = "Objective: Survive";
+            NextWave();
+            clickCount = clickCount + 1;
         }
-        if (clickCount == 6)
+        if (clickCount > 5)
         {
             displayText.text = "Objective: Survive";
-            Spawner.Play();
-        }
-        if (clickCount > 6)
-        {
-            displayText.text = "Objective: Survive";
+            if (Spawner.killed == Spawner.spawned)
+            {
+                waveCount = waveCount + 1;
+                clickCount = 0;
+            }
         }
     }
 
     void Wave2()
     {
+        if (clickCount == 0)
+        {
+            displayText.text = "Hello?";
+        }
+        if (clickCount == 1)
+        {
+            displayText.text = "Good, you're still alive.";
+        }
+        if (clickCount == 2)
+        {
+            displayText.text = "we're detecting another wave incoming.";
+        }
+        if (clickCount == 3)
+        {
+            displayText.text = "Objective: Survive";
+            NextWave();
+            clickCount = clickCount + 1;
+        }
+        if (clickCount > 3)
+        {
+            displayText.text = "Objective: Survive";
+            if (Spawner.killed == Spawner.spawned)
+            {
+                waveCount = waveCount + 1;
+                clickCount = 0;
+            }
+        }
+    }
 
+    void Wave3()
+    {
+
+    }
+
+    void Wave4()
+    {
+
+    }
+
+    void Wave5()
+    {
+
+    }
+
+
+
+
+    void NextWave()
+    {
+        Spawner.NextWave();
     }
 
 }
