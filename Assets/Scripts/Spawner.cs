@@ -23,13 +23,15 @@ public class Spawner : MonoBehaviour
     public int killed;
     private int spawned;
 
+    public GameObject Computer;
+
     private void Start()
     {
 
 
-        NextWave();
-        killed = 0;
-        spawned = currentWave.enemyCount;
+       // NextWave();
+        //killed = 0;
+        //spawned = currentWave.enemyCount;
 
 
     }
@@ -44,24 +46,15 @@ public class Spawner : MonoBehaviour
             EnemyController spawnedEnemy = Instantiate(enemy, transform.position, transform.rotation) as EnemyController;
         }
 
-        if (killed == spawned)
+       /* if (killed == spawned)
         {
             killed = 0;
             Invoke("NextWave", waveDelay);
-        }
+        }*/
     }
 
-    void OnEnemyDeath()
-    {
 
-        {
-            NextWave();
-        }
-
-        print("ondeath");
-    }
-
-    void NextWave()
+    public void NextWave()
     {
 
         currentWaveNumber++;
@@ -76,6 +69,13 @@ public class Spawner : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
+    }
+
+    public void Play()
+    {
+        NextWave();
+        killed = 0;
+        spawned = currentWave.enemyCount;
     }
 
     [System.Serializable]
