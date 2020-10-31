@@ -11,6 +11,8 @@ public class FlashLight : MonoBehaviour
     public static bool flashlightON;
     public Light theLight;
     XRGrabInteractable m_InteractableBase;
+    public AudioSource audioSource;
+    public float volume = 0.5f;
 
     private void Start()
     {
@@ -24,6 +26,7 @@ public class FlashLight : MonoBehaviour
 
     void TriggerPulled(XRBaseInteractor obj)
     {
+        audioSource.PlayOneShot(audioSource.clip, volume);
         if (flashlightON == false)
         {
             LightON();

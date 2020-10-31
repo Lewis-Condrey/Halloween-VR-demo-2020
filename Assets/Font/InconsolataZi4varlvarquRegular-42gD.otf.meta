@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 4fbadd1e9d62a9f4bad5eef781f4e7a8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Inconsolatazi4varl_qu
+  fontNames:
+  - Inconsolatazi4varl_qu
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1b090f02429f43e499ed44e1bcbaa348, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

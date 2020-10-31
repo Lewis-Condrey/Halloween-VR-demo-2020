@@ -144,6 +144,10 @@ MonoBehaviour:
   spawner: {fileID: 0}
   fLight: {fileID: -6244339325737476542, guid: 1316eced4fd86934fbe93006af144e94, type: 3}
   theLight: {fileID: 0}
+  particles: {fileID: 1423337183562523187, guid: 7757d8709f5bb92488dfa28264fd2cdd,
+    type: 3}
+  audioSource: {fileID: 0}
+  volume: 0.5
 --- !u!114 &2790814522427039000
 MonoBehaviour:
   m_ObjectHideFlags: 0
