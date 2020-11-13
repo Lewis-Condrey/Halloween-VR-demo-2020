@@ -25,49 +25,29 @@ public class Spawner : MonoBehaviour
 
     public ComputerText Computer;
 
-    private void Start()
-    {
-
-
-       // NextWave();
-      //  killed = 0;
-        spawned = currentWave.enemyCount;
-
-
-    }
     void Update()
     {
+        //spawning the enemies according to wave settings
+
         if (enemiesRemainingToSpawn > 0 && Time.time > nextSpawnTime)
         {
 
             enemiesRemainingToSpawn--;
             nextSpawnTime = Time.time + currentWave.timeBetweenSpawns;
-            //EnemyController spawnedEnemy = Instantiate(enemy, Vector3.zero, Quaternion.identity) as EnemyController;
             EnemyController spawnedEnemy = Instantiate(enemy, transform.position, transform.rotation) as EnemyController;
         }
-
-      /*  if (killed == spawned)
-        {
-            killed = 0;
-            Computer.waveCount = Computer.waveCount + 1;
-        }*/
     }
 
 
     public void NextWave()
     {
-
+        //resetting parameters and starting the next wave
         currentWaveNumber++;
         if (currentWaveNumber - 1 < waves.Length)
         {
             currentWave = waves[currentWaveNumber - 1];
             enemiesRemainingToSpawn = currentWave.enemyCount;
             spawned = currentWave.enemyCount;
-        }
-
-        if (currentWaveNumber == 4)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         }
     }
 
@@ -81,6 +61,7 @@ public class Spawner : MonoBehaviour
     [System.Serializable]
     public class wave
     {
+        //parameters wave each wave to be accessed in editor 
         public int enemyCount;
         public float timeBetweenSpawns;
 

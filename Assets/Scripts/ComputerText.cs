@@ -17,34 +17,23 @@ public class ComputerText : MonoBehaviour
     public AudioSource audioSource;
     public float volume = 0.5f;
     public GameObject win;
-    Vector3 pos;
+    public GameManager GM;
+    public MusicManager MM;
 
     void Start()
     {
         m_InteractableBase = GetComponent<XRSimpleInteractable>();
         m_InteractableBase.onSelectEnter.AddListener(conClicked);
-        
-
-        //string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-        //string userName = (Environment.UserName);
-        //Debug.Log(Environment.UserName);
-
-        // DisplayText();
-        //displayText.text = "" + textToDisplay;
-
-        //displayText.text = "What ever you want to display";
-
+     
         clickCount = 0;
 
         waveCount = 1;
-
-        pos = new Vector3(0, 3, 4);
-        win.transform.localPosition = pos;
-
     }
 
     void Update()
     {
+        //probably a better way to do this but it was written with a the time limit in mind
+
         if (waveCount == 1)
         {
             Wave1();
@@ -71,27 +60,11 @@ public class ComputerText : MonoBehaviour
         }
     }
 
-    public void DisplayText() {
-        //displayText.text = "What ever you want to display";
-
-        //displayText.text = (Environment.UserName);
-
-        //displayText.text = 
-
-        //displayText.text = "Hello " + (Environment.UserName);
-
-    }
-
-    public void Clicked()
-    {
-        Debug.Log("Bönk");
-    }
-
     void conClicked(XRBaseInteractor obj)
     {
+        // clicking displays next text in sequence (could probably have been done with enum?
         clickCount = clickCount + 1;
         audioSource.PlayOneShot(audioSource.clip, volume);
-        Debug.Log(clickCount);
     }
 
     public void Endgame()
@@ -112,16 +85,25 @@ public class ComputerText : MonoBehaviour
         if (clickCount == 3)
         {
             displayText.text = "We just needed to buy some time.";
-            Instantiate(win);
+            //Instantiate(win);
         }
         if (clickCount == 4)
         {
+            win.SetActive(true);
+            MM.EndTheme();
             displayText.text = "You should turn around " + (Environment.UserName);
+            clickCount = +1;
         }
-        if (clickCount > 4)
+        if (clickCount == 6)
         {
-            displayText.text = "...";
+            displayText.text = "press to end";
+
         }
+        if (clickCount > 6)
+        {
+            GM.Win();
+        }
+
     }
 
     public void Wave1()
@@ -141,7 +123,7 @@ public class ComputerText : MonoBehaviour
         }
         if (clickCount == 3)
         {
-            displayText.text = "If you see anything unusual be sure to shine your flashlight at it, don't let them get too close.";
+            displayText.text = "If you see anything unusual be sure to shine your flashlight at it, don't let them get to the window";
         }
         if (clickCount == 4)
         {
@@ -230,38 +212,37 @@ public class ComputerText : MonoBehaviour
         }
 
     public void Wave4()
+    {
+
+        if (clickCount == 0)
         {
-            if (clickCount == 0)
-            {
-                displayText.text = "Continue";
-            }
-             if (clickCount == 1)
-            {
-                displayText.text = "You're doing great! the data we've collected is very promising.";
-            }
-             if (clickCount == 2)
-             {
-              displayText.text = "Just keep at it and don't ask questions ok?";
-             }
-
+            displayText.text = "Continue";
+        }
+        if (clickCount == 1)
+        {
+            displayText.text = "You're doing great! the data we've collected is very promising.";
+        }
+        if (clickCount == 2)
+        {
+            displayText.text = "Just keep at it and don't ask questions ok?";
+        }
         if (clickCount == 3)
+        {
+            displayText.text = "Objective: Survive";
+            Spawner.killed = 0;
+            NextWave();
+            clickCount = clickCount + 1;
+        }
+        if (clickCount > 3)
+        {
+            displayText.text = "Objective: Survive";
+            if (Spawner.killed == Spawner.spawned)
             {
-                displayText.text = "Objective: Survive";
-                Spawner.killed = 0;
-                NextWave();
-                clickCount = clickCount + 1;
-            }
-
-            if (clickCount > 3)
-            {
-                displayText.text = "Objective: Survive";
-                if (Spawner.killed == Spawner.spawned)
-                {
-                    waveCount = waveCount + 1;
-                    clickCount = 0;
-                }
+                waveCount = waveCount + 1;
+                clickCount = 0;
             }
         }
+    }
     public void Wave5()
         {
             if (clickCount == 0)

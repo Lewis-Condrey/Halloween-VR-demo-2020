@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3452055856606799040}
   - component: {fileID: 8957526639629065232}
   - component: {fileID: 1878465375573052454}
+  - component: {fileID: 1585031452286163218}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -4909,3 +4910,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1585031452286163218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423337183562523187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c8380c7309eb74f981cb607f0e5593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeTime: 3

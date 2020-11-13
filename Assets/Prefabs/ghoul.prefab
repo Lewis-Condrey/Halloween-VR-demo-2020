@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   player: {fileID: 3808701553183031434, guid: 41cdaaf36ff58c143acb78b4b17c2718, type: 3}
+  GM: {fileID: 0}
 --- !u!114 &-564081223561710148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,8 +147,6 @@ MonoBehaviour:
   theLight: {fileID: 0}
   particles: {fileID: 1423337183562523187, guid: 7757d8709f5bb92488dfa28264fd2cdd,
     type: 3}
-  audioSource: {fileID: 0}
-  volume: 0.5
 --- !u!114 &2790814522427039000
 MonoBehaviour:
   m_ObjectHideFlags: 0

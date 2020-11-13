@@ -26,6 +26,8 @@ public class HandPresence : MonoBehaviour
 
     void TryInitialize()
     {
+        //this will try to get a vr hmd and controllers. store that information and then spawn hands at the controllers position 
+
         List<InputDevice> devices = new List<InputDevice>();
 
         InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
@@ -44,6 +46,8 @@ public class HandPresence : MonoBehaviour
 
     void UpdateHandAnimation()
     {
+        //here I set hand poses percentage to float values of the buttons pressed allowing precise blending of poses instead of animating
+
         if (targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
         {
             handAnimator.SetFloat("Trigger", triggerValue);
@@ -65,6 +69,7 @@ public class HandPresence : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //animate the hands if the device if found, if not keep trying to find a device 
 
         if (!targetDevice.isValid)
         {

@@ -31,7 +31,6 @@ public class FlashLight : MonoBehaviour
         {
             LightON();
             flashlightON = true;
-            //Debug.Log("funny");
             return;
         }
         if (flashlightON == true)

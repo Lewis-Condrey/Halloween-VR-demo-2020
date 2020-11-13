@@ -11,10 +11,8 @@ public class EnemyHealthManager : MonoBehaviour
     public FlashLight fLight;
     public Light theLight;
     XRGrabInteractable m_InteractableBase;
-    //public ParticleSystem particles;
     public GameObject particles;
-   // public AudioSource audioSource;
-    //public float volume = 0.5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,15 +23,20 @@ public class EnemyHealthManager : MonoBehaviour
 
     public void EnemyDie()
     {
-        // if(fLight.flashlightON == true)
+// make sure enemy can only die if the light is pointed at them and turned on
         if (FlashLight.flashlightON == true)
         {
             spawner.killed = spawner.killed + 1;
             Debug.Log("ghoul dead");
-           // audioSource.PlayOneShot(audioSource.clip, volume);
             Instantiate(particles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
         else { return; }
     }
+
+    public void restart()
+    {
+        Destroy(gameObject);
+    }
+
 }
